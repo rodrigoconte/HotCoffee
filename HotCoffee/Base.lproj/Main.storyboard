@@ -81,7 +81,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yej-RK-gZh">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yej-RK-gZh">
                                 <rect key="frame" x="107" y="590" width="200" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="biu-gs-CdQ"/>
@@ -89,7 +89,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ue1-Qv-UcJ">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ue1-Qv-UcJ">
                                 <rect key="frame" x="107" y="659" width="200" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="ynM-fb-o0c"/>
@@ -112,10 +112,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Order" id="6i1-od-h6l">
-                        <barButtonItem key="leftBarButtonItem" title="Close" id="rOI-0y-yzc"/>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="wIS-L0-hWt"/>
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="rOI-0y-yzc">
+                            <connections>
+                                <action selector="closeButtonPressed:" destination="iNU-BP-Hj5" id="ETB-pu-DZl"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="wIS-L0-hWt">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="iNU-BP-Hj5" id="qh0-K4-kfv"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="emailTextField" destination="Ue1-Qv-UcJ" id="fuV-m3-GHQ"/>
+                        <outlet property="nameTextField" destination="yej-RK-gZh" id="gV0-r3-jHA"/>
                         <outlet property="tableView" destination="3em-Ag-ge4" id="a64-mU-0J6"/>
                     </connections>
                 </viewController>
