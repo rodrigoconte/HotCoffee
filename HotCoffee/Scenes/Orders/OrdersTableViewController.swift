@@ -32,6 +32,30 @@ class OrdersTableViewController: UITableViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let navC = segue.destination as? UINavigationController,
+              let addCoffeOrderViewController = navC.viewControllers.first as? AddOrderViewController else {
+            fatalError("Error while perform segue")
+        }
+        
+        addCoffeOrderViewController.delegate = self
+    }
+    
+}
+
+// MARK: - Other views delegate
+
+extension OrdersTableViewController: AddOrderDelegate {
+    func addCoffeOrderViewControllerDidSave(order: Order, controller: UIViewController) {
+        controller.dismiss(animated: true, completion: nil)
+        let orderVM = OrderViewModel(order: order)
+        self.ordersListViewModel.ordersViewModel.append(orderVM)
+        self.tableView.insertRows(at: [IndexPath.init(row: self.ordersListViewModel.ordersViewModel.count - 1, section: 0)], with: .automatic)
+    }
+    
+    func addCoffeOrderViewControllerDidClose(controller: UIViewController) {
+        controller.dismiss(animated: true, completion: nil)
+    }
 }
 
 // MARK: - Table view Data source and Delegate
