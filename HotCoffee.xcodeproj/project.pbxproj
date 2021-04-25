@@ -16,6 +16,7 @@
 		D534EAF42634CBD900BDBF10 /* AddOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D534EAF32634CBD900BDBF10 /* AddOrderViewController.swift */; };
 		D534EAFB2634D47100BDBF10 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D534EAFA2634D47100BDBF10 /* WebService.swift */; };
 		D534EB002634DF5500BDBF10 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = D534EAFF2634DF5500BDBF10 /* Order.swift */; };
+		D534EB052635E3DF00BDBF10 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D534EB042635E3DF00BDBF10 /* OrderViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		D534EAF32634CBD900BDBF10 /* AddOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderViewController.swift; sourceTree = "<group>"; };
 		D534EAFA2634D47100BDBF10 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		D534EAFF2634DF5500BDBF10 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		D534EB042635E3DF00BDBF10 /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				D534EAFE2634DF4C00BDBF10 /* Models */,
 				D534EAEE2634CB1300BDBF10 /* OrdersTableViewController.swift */,
+				D534EB042635E3DF00BDBF10 /* OrderViewModel.swift */,
 			);
 			path = Orders;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				D534EAD72634C94200BDBF10 /* SceneDelegate.swift in Sources */,
 				D534EAEF2634CB1300BDBF10 /* OrdersTableViewController.swift in Sources */,
 				D534EAFB2634D47100BDBF10 /* WebService.swift in Sources */,
+				D534EB052635E3DF00BDBF10 /* OrderViewModel.swift in Sources */,
 				D534EAF42634CBD900BDBF10 /* AddOrderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
